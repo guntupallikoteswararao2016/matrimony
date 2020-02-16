@@ -1,11 +1,11 @@
 {
-  "name": "heroku-react-express",
+  "name": "matter-money-real",
   "version": "1.0.0",
   "main": "server.js",
   "license": "MIT",
   "author": {
-    "name": "Esau Silva (@_esausilva)",
-    "url": "https://esausilva.com"
+    "name": "siva sankar",
+    "url": "https://matter-money-real.herokuapp.com/"
   },
   "scripts": {
     "dev": "run-p dev:**",
@@ -27,15 +27,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/esausilva/react-production-deployment"
+    "url": "https://github.com/guntupallikoteswararao2016/matrimony.git"
   },
   "bugs": {
-    "url": "https://github.com/esausilva/react-production-deployment/issues"
+    "url": "https://github.com/guntupallikoteswararao2016/matrimony/issues"
   },
   "keywords": [
     "heroku",
     "express",
-    "create-react-app",
-    "react"
+    "mangoose",
+    "HTML5",
+    "react",
+    "redux"
   ]
 }
