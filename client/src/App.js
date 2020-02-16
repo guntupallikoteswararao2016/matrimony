@@ -99,6 +99,7 @@ class Home extends Component {
             Learn React
           </a>
           <a href="/profile/9032">view profile</a>
+          <Link to="/profile/9032" > profile</Link> 
           <p>{this.state.response}</p>
           <form onSubmit={this.handleSubmit}>
             <p>
@@ -128,6 +129,7 @@ const App = () => (
           </li>
           <li>
             <Link to="/another-page/">Another Page</Link>
+            <Link to="/profile/9032">/profile>9032</Link>
           </li>
         </ul>
       </nav>
