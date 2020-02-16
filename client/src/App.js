@@ -98,6 +98,7 @@ class Home extends Component {
           >
             Learn React
           </a>
+          <a href="/profile/9032">view profile</a>
           <p>{this.state.response}</p>
           <form onSubmit={this.handleSubmit}>
             <p>
