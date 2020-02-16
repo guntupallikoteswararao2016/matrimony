@@ -5,6 +5,47 @@ import './App.css';
 
 const AnotherPage = () => <h1>Another Page</h1>;
 const NotFound = () => <h1>404 Not Found</h1>;
+
+class Profile extends React.Component {
+  state = {
+      profile: []
+    }
+  
+    componentDidMount() {
+      const { id } = this.props.match.params;
+      // debugger;
+      fetch(`/profile/${id}`)
+        .then(res => {
+          console.log(res);
+          return res.json()
+        })
+        .then(profile => {
+          console.log(profile);
+          this.setState({ profile })
+        });
+    }
+
+
+  render() {
+      debugger;
+      return (
+          <div>
+               <a href={'/'}>Back</a>
+              <h1>Profile Preview</h1>
+              {
+                 <div>
+                      <p>Name:{this.state.profile.name}</p>
+                      <p>id: {this.state.profile.id} </p>
+                      <p>location: {this.state.profile.location} </p>
+                      <p>job: {this.state.profile.job} </p>
+                 </div>
+              }
+          </div>
+      )
+  }
+}
+
+
 class Home extends Component {
   state = {
     response: '',
@@ -93,6 +134,7 @@ const App = () => (
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/another-page/" component={AnotherPage} />
+        <Route path="/profile/:id" component={Profile} />
         <Route component={NotFound} />
       </Switch>
     </div>
